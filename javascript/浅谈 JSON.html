@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浅谈 JSON | AlexTao 的 博客</title>
+    <meta name="description" content="In doing we learn.">
+    <link rel="icon" href="favicon.ico">
+    
+    <link rel="preload" href="/Weblog/assets/css/styles.05873600.css" as="style"><link rel="preload" href="/Weblog/assets/js/app.05873600.js" as="script"><link rel="preload" href="/Weblog/assets/js/55.3f8a7f90.js" as="script"><link rel="prefetch" href="/Weblog/assets/css/16.styles.2339a627.css"><link rel="prefetch" href="/Weblog/assets/css/5.styles.c1152841.css"><link rel="prefetch" href="/Weblog/assets/css/7.styles.1f4a6057.css"><link rel="prefetch" href="/Weblog/assets/css/8.styles.5b6e1357.css"><link rel="prefetch" href="/Weblog/assets/js/0.a8dcd889.js"><link rel="prefetch" href="/Weblog/assets/js/10.fe0f74e6.js"><link rel="prefetch" href="/Weblog/assets/js/11.d51cd775.js"><link rel="prefetch" href="/Weblog/assets/js/12.01521323.js"><link rel="prefetch" href="/Weblog/assets/js/13.82c3fc4a.js"><link rel="prefetch" href="/Weblog/assets/js/14.3b16e4be.js"><link rel="prefetch" href="/Weblog/assets/js/15.abf2374c.js"><link rel="prefetch" href="/Weblog/assets/js/16.2339a627.js"><link rel="prefetch" href="/Weblog/assets/js/17.f68b5694.js"><link rel="prefetch" href="/Weblog/assets/js/18.1dc877c8.js"><link rel="prefetch" href="/Weblog/assets/js/19.8d3a8eb9.js"><link rel="prefetch" href="/Weblog/assets/js/2.af3ad6a4.js"><link rel="prefetch" href="/Weblog/assets/js/20.b49a1359.js"><link rel="prefetch" href="/Weblog/assets/js/21.791ceaa2.js"><link rel="prefetch" href="/Weblog/assets/js/22.fc4cbaec.js"><link rel="prefetch" href="/Weblog/assets/js/23.4ad12214.js"><link rel="prefetch" href="/Weblog/assets/js/24.55bc5812.js"><link rel="prefetch" href="/Weblog/assets/js/25.f985eed7.js"><link rel="prefetch" href="/Weblog/assets/js/26.4cb7663f.js"><link rel="prefetch" href="/Weblog/assets/js/27.a14669b1.js"><link rel="prefetch" href="/Weblog/assets/js/28.8620d72f.js"><link rel="prefetch" href="/Weblog/assets/js/29.d0f2b69c.js"><link rel="prefetch" href="/Weblog/assets/js/3.fb06d288.js"><link rel="prefetch" href="/Weblog/assets/js/30.779bb068.js"><link rel="prefetch" href="/Weblog/assets/js/31.40c7de84.js"><link rel="prefetch" href="/Weblog/assets/js/32.ba7c27f0.js"><link rel="prefetch" href="/Weblog/assets/js/33.6ab2c1a8.js"><link rel="prefetch" href="/Weblog/assets/js/34.e8c873d7.js"><link rel="prefetch" href="/Weblog/assets/js/35.e96a75ad.js"><link rel="prefetch" href="/Weblog/assets/js/36.86fbcd91.js"><link rel="prefetch" href="/Weblog/assets/js/37.b26a2882.js"><link rel="prefetch" href="/Weblog/assets/js/38.992c347d.js"><link rel="prefetch" href="/Weblog/assets/js/39.e58d8f81.js"><link rel="prefetch" href="/Weblog/assets/js/4.b91b4b8a.js"><link rel="prefetch" href="/Weblog/assets/js/40.01c8b7bc.js"><link rel="prefetch" href="/Weblog/assets/js/41.75147100.js"><link rel="prefetch" href="/Weblog/assets/js/42.b2377431.js"><link rel="prefetch" href="/Weblog/assets/js/43.3a184450.js"><link rel="prefetch" href="/Weblog/assets/js/44.067bcf22.js"><link rel="prefetch" href="/Weblog/assets/js/45.68ba4476.js"><link rel="prefetch" href="/Weblog/assets/js/46.78e6e5f5.js"><link rel="prefetch" href="/Weblog/assets/js/47.08c79ff4.js"><link rel="prefetch" href="/Weblog/assets/js/48.24964852.js"><link rel="prefetch" href="/Weblog/assets/js/49.e7608465.js"><link rel="prefetch" href="/Weblog/assets/js/5.c1152841.js"><link rel="prefetch" href="/Weblog/assets/js/50.35c99ad9.js"><link rel="prefetch" href="/Weblog/assets/js/51.6b5dac05.js"><link rel="prefetch" href="/Weblog/assets/js/52.c4bb9237.js"><link rel="prefetch" href="/Weblog/assets/js/53.e53dd56d.js"><link rel="prefetch" href="/Weblog/assets/js/54.b8170212.js"><link rel="prefetch" href="/Weblog/assets/js/56.70171628.js"><link rel="prefetch" href="/Weblog/assets/js/57.bfaf61b1.js"><link rel="prefetch" href="/Weblog/assets/js/58.db4b1b8a.js"><link rel="prefetch" href="/Weblog/assets/js/59.77684353.js"><link rel="prefetch" href="/Weblog/assets/js/6.829d0e7e.js"><link rel="prefetch" href="/Weblog/assets/js/60.6e9d6cac.js"><link rel="prefetch" href="/Weblog/assets/js/61.275c3154.js"><link rel="prefetch" href="/Weblog/assets/js/62.dd80ea43.js"><link rel="prefetch" href="/Weblog/assets/js/63.dbe8bf46.js"><link rel="prefetch" href="/Weblog/assets/js/64.14e4d91c.js"><link rel="prefetch" href="/Weblog/assets/js/65.c15a382b.js"><link rel="prefetch" href="/Weblog/assets/js/66.1eb3e94c.js"><link rel="prefetch" href="/Weblog/assets/js/67.3ae69c25.js"><link rel="prefetch" href="/Weblog/assets/js/68.2e02b211.js"><link rel="prefetch" href="/Weblog/assets/js/69.2016bf42.js"><link rel="prefetch" href="/Weblog/assets/js/7.1f4a6057.js"><link rel="prefetch" href="/Weblog/assets/js/70.8e2ebe5b.js"><link rel="prefetch" href="/Weblog/assets/js/8.5b6e1357.js"><link rel="prefetch" href="/Weblog/assets/js/9.93970f24.js">
+    <link rel="stylesheet" href="/Weblog/assets/css/styles.05873600.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Weblog/" class="home-link router-link-active"><!----><span class="site-name">
+      AlexTao 的 博客
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link router-link-active">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link router-link-active">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Javascript</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/Weblog/javascript/" aria-current="page" class="sidebar-link">高效javascript</a></li><li><a href="/Weblog/javascript/33个概念.html" class="sidebar-link">JavaScript开发者应懂的33个概念</a></li><li><a href="/Weblog/javascript/js备忘录.html" class="sidebar-link">JS备忘录</a></li><li><a href="/Weblog/javascript/js概念.html" class="sidebar-link">JS 概念</a></li><li><a href="/Weblog/javascript/片段和trick.html" class="sidebar-link">片段和trick</a></li><li><a href="/Weblog/javascript/常用正则.html" class="sidebar-link">常用正则表达式</a></li><li><a href="/Weblog/javascript/处理异步的方法.html" class="sidebar-link">处理异步的方法</a></li><li><a href="/Weblog/javascript/字符串.html" class="sidebar-link">字符串</a></li><li><a href="/Weblog/javascript/数组.html" class="sidebar-link">数组</a></li><li><a href="/Weblog/javascript/浅谈 JSON.html" class="active sidebar-link">浅谈 JSON</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Weblog/javascript/详解闭包.html" class="sidebar-link">详解闭包</a></li><li><a href="/Weblog/javascript/执行上下文.html" class="sidebar-link">执行上下文</a></li><li><a href="/Weblog/javascript/this.html" class="sidebar-link">this</a></li><li><a href="/Weblog/javascript/深浅拷贝.html" class="sidebar-link">深浅拷贝</a></li><li><a href="/Weblog/javascript/面向对象.html" class="sidebar-link">面向对象</a></li><li><a href="/Weblog/javascript/继承方式.html" class="sidebar-link">继承方式</a></li><li><a href="/Weblog/javascript/节流防抖.html" class="sidebar-link">节流防抖</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="浅谈-json">浅谈 JSON</h1><p>json，全称为javascript object notation，是一种轻量级的<strong>数据交互格式</strong>。采用完全独立于语言的文本格式，是一种理想的数据交换格式。</p><p>同时，json是javascript是原生格式，所以javascript操作处理json不需要任何包，api，任何依赖。</p><p><strong>json中有两个结构：</strong>（1）数组（2）对象</p><h3 id="json字符串转换成json对象-（字符串-json对象）">json字符串转换成json对象 （字符串--&gt;JSON对象）</h3><ul><li><p><strong>JSON.parse()</strong></p><ul><li><div class="language- extra-class"><pre class="language-text"><code>var a = '{&quot;a&quot;:2}';
+JSON.parse(a);  //{a:2}
+</code></pre></div></li></ul></li><li><p><strong>parseJSON()</strong> （JQ插件）</p><ul><li><div class="language- extra-class"><pre class="language-text"><code>$.parseJSON( jsonstr ); //jQuery.parseJSON(jsonstr),可以将json字符串转换成json对象
+</code></pre></div></li></ul></li><li><p><strong>eval()方法</strong></p><ul><li><p>eval()函数可计算某一个字符串，并执行其中的javascript代码。</p></li><li><div class="language- extra-class"><pre class="language-text"><code>var s = '{a:2}';
+eval('(' + s + ')'); //将json字符串转成json对象，需要在字符串外包裹一对括号(),   {a:2}
+</code></pre></div></li></ul></li></ul><h3 id="json对象转换成字符串（json对象-字符串）">json对象转换成字符串（json对象--&gt;字符串）</h3><ul><li><p><strong>JSON.stringify()</strong></p><ul><li><div class="language- extra-class"><pre class="language-text"><code>JSON.stringify ( value [, replacer] [ , space] )
+</code></pre></div><p>参数：</p><p>（1）value：必选，要转换的值（包括所有的数据类型，通常是对象或者数组）</p><p>（2）replace：可选，用于要转换结果的函数或者数组；如果replace是数组，仅仅是转换具有该键值的成员，成员的转换顺序和键在数组中的顺序一致；如果replace是函数，会传入每一个成员的键和值，<strong>使用的是返回值而不是原始值</strong>，如果函数返回的是undefined，则排除该成员。查看了JSON2的源码，</p><p>（3）space：可选， 向返回值JSON 文本添加缩进、空格和换行符以使其更易于读取。</p><p>如果省略space，则将生成返回值文本，而没有任何额外空格。</p><p>如果 space是一个数字，则返回值文本在每个级别缩进指定数目的空格。 如果 space 大于 10，则文本  缩进 10 个空格。</p><p>如果 space是一个非空字符串（例如“\t”），则返回值文本在每个级别中缩进字符串中的字符。</p><p>如果 space 是长度大于 10个字符的字符串，则使用前 10 个字符</p><div class="language- extra-class"><pre class="language-text"><code>var data = [{
+            name: &quot;张三&quot;,
+            sex: &quot;1&quot;,
+            age: 26
+        },
+        {
+            name: &quot;李四&quot;,
+            sex: &quot;0&quot;,
+            age: 20
+        },
+        {
+            name: &quot;王五&quot;,
+            sex: &quot;1&quot;,
+            age: 22
+        },
+        {
+            name: &quot;老六&quot;,
+            sex: &quot;1&quot;,
+            age: 18
+        }
+    ];
+    /*日常用法*/
+    console.log(data,'数组');
+    var str_json = JSON.stringify(data);
+    console.log(str_json,'字符串');
+
+    /*提取用户名和性别-方法1*/
+    for(var i=0,new_data=[];i&lt;data.length;i++){
+       new_data.push({
+           name: data[i].name,
+           sex: data[i].sex
+       });
+    }
+    var str_json = JSON.stringify(new_data);
+    console.log(str_json);
+    /*提取用户名和性别-方法2*/
+    var str_json = JSON.stringify(data,[&quot;name&quot;,&quot;sex&quot;]);
+    console.log(str_json);
+
+    /*回调函数做一个映射关系*/
+    var str_json = JSON.stringify(data, function(key, value) {
+        if (key == 'sex') {
+            return ['女', '男'][value];
+            /*该处注释等价于return ['女','男'][value];*/
+            //        if(value == 0 ){
+            //            value = '女';
+            //        }else{
+            //            value = '男';
+            //        }
+        }
+        return value;
+    });
+    console.log(str_json);
+
+    /*格式化字符串*/
+    var str_json = JSON.stringify(data,null,'\t');
+    console.log(str_json);
+    var str_json = JSON.stringify(data,['name','sex'],'\t');
+    console.log(str_json);
+</code></pre></div></li></ul></li></ul><h3 id="将值转换成字符串（值-字符串）">将值转换成字符串（值--&gt;字符串）</h3><ul><li><p><strong>value.toString()</strong></p><ul><li><p>注意：不能将null和undefined转换成字符串</p></li><li><div class="language- extra-class"><pre class="language-text"><code>var n =8;
+n.toString(几进制)；
+
+var num = 110;
+var num_10 = num.toString(10);
+var num_02 = num.toString(2);
+console.log(num_10)  //110
+console.log(num_02)  //1101110
+</code></pre></div></li></ul></li><li><p><strong>弱类型转换：value + ''</strong><strong>&quot;</strong></p></li><li><p><strong>强制类型转换：String(value)</strong></p></li></ul><h3 id="字符串转成值（字符串-值）">字符串转成值（字符串--&gt;值）</h3><ul><li><p><strong>parseInt()和parseFloat()</strong></p><ul><li><div class="language- extra-class"><pre class="language-text"><code>parseInt(&quot;1234blue&quot;);   //returns 1234
+parseInt(&quot;22.5&quot;);     //returns 22
+parseInt(&quot;blue&quot;);    //returns NaN
+
+parseInt(&quot;AF&quot;, 16); //returns 175
+parseInt(&quot;10&quot;, 2); //returns 2
+
+parseFloat(&quot;1234blue&quot;);   //returns 1234.0
+parseFloat(&quot;22.5&quot;);      //returns 22.5
+parseFloat(&quot;blue&quot;);     //returns NaN
+</code></pre></div></li></ul></li><li><p><strong>强制类型转换</strong></p><ul><li><p><strong>Number(value)</strong></p></li><li><div class="language- extra-class"><pre class="language-text"><code>Number(false) 0
+Number(true) 1
+Number(undefined) NaN
+Number(null) 0
+Number( &quot;5.5 &quot;) 5.5
+Number( &quot;56 &quot;) 56
+Number( &quot;5.6.7 &quot;) NaN
+</code></pre></div></li></ul></li><li><p><strong>js弱类型转换</strong></p><ul><li><div class="language- extra-class"><pre class="language-text"><code>var str= '012.345 ';
+var x = str-0;      //输出12.345
+</code></pre></div></li></ul></li></ul><p>Now, let's try it 👉</p></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">9/20/2020, 12:22:33 PM</span></div></div><!----></div></div></div>
+    <script src="/Weblog/assets/js/app.05873600.js" defer></script><script src="/Weblog/assets/js/55.3f8a7f90.js" defer></script>
+  </body>
+</html>

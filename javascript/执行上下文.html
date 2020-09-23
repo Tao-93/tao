@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>执行上下文 | AlexTao 的 博客</title>
+    <meta name="description" content="In doing we learn.">
+    <link rel="icon" href="favicon.ico">
+    
+    <link rel="preload" href="/Weblog/assets/css/styles.05873600.css" as="style"><link rel="preload" href="/Weblog/assets/js/app.05873600.js" as="script"><link rel="preload" href="/Weblog/assets/js/53.e53dd56d.js" as="script"><link rel="prefetch" href="/Weblog/assets/css/16.styles.2339a627.css"><link rel="prefetch" href="/Weblog/assets/css/5.styles.c1152841.css"><link rel="prefetch" href="/Weblog/assets/css/7.styles.1f4a6057.css"><link rel="prefetch" href="/Weblog/assets/css/8.styles.5b6e1357.css"><link rel="prefetch" href="/Weblog/assets/js/0.a8dcd889.js"><link rel="prefetch" href="/Weblog/assets/js/10.fe0f74e6.js"><link rel="prefetch" href="/Weblog/assets/js/11.d51cd775.js"><link rel="prefetch" href="/Weblog/assets/js/12.01521323.js"><link rel="prefetch" href="/Weblog/assets/js/13.82c3fc4a.js"><link rel="prefetch" href="/Weblog/assets/js/14.3b16e4be.js"><link rel="prefetch" href="/Weblog/assets/js/15.abf2374c.js"><link rel="prefetch" href="/Weblog/assets/js/16.2339a627.js"><link rel="prefetch" href="/Weblog/assets/js/17.f68b5694.js"><link rel="prefetch" href="/Weblog/assets/js/18.1dc877c8.js"><link rel="prefetch" href="/Weblog/assets/js/19.8d3a8eb9.js"><link rel="prefetch" href="/Weblog/assets/js/2.af3ad6a4.js"><link rel="prefetch" href="/Weblog/assets/js/20.b49a1359.js"><link rel="prefetch" href="/Weblog/assets/js/21.791ceaa2.js"><link rel="prefetch" href="/Weblog/assets/js/22.fc4cbaec.js"><link rel="prefetch" href="/Weblog/assets/js/23.4ad12214.js"><link rel="prefetch" href="/Weblog/assets/js/24.55bc5812.js"><link rel="prefetch" href="/Weblog/assets/js/25.f985eed7.js"><link rel="prefetch" href="/Weblog/assets/js/26.4cb7663f.js"><link rel="prefetch" href="/Weblog/assets/js/27.a14669b1.js"><link rel="prefetch" href="/Weblog/assets/js/28.8620d72f.js"><link rel="prefetch" href="/Weblog/assets/js/29.d0f2b69c.js"><link rel="prefetch" href="/Weblog/assets/js/3.fb06d288.js"><link rel="prefetch" href="/Weblog/assets/js/30.779bb068.js"><link rel="prefetch" href="/Weblog/assets/js/31.40c7de84.js"><link rel="prefetch" href="/Weblog/assets/js/32.ba7c27f0.js"><link rel="prefetch" href="/Weblog/assets/js/33.6ab2c1a8.js"><link rel="prefetch" href="/Weblog/assets/js/34.e8c873d7.js"><link rel="prefetch" href="/Weblog/assets/js/35.e96a75ad.js"><link rel="prefetch" href="/Weblog/assets/js/36.86fbcd91.js"><link rel="prefetch" href="/Weblog/assets/js/37.b26a2882.js"><link rel="prefetch" href="/Weblog/assets/js/38.992c347d.js"><link rel="prefetch" href="/Weblog/assets/js/39.e58d8f81.js"><link rel="prefetch" href="/Weblog/assets/js/4.b91b4b8a.js"><link rel="prefetch" href="/Weblog/assets/js/40.01c8b7bc.js"><link rel="prefetch" href="/Weblog/assets/js/41.75147100.js"><link rel="prefetch" href="/Weblog/assets/js/42.b2377431.js"><link rel="prefetch" href="/Weblog/assets/js/43.3a184450.js"><link rel="prefetch" href="/Weblog/assets/js/44.067bcf22.js"><link rel="prefetch" href="/Weblog/assets/js/45.68ba4476.js"><link rel="prefetch" href="/Weblog/assets/js/46.78e6e5f5.js"><link rel="prefetch" href="/Weblog/assets/js/47.08c79ff4.js"><link rel="prefetch" href="/Weblog/assets/js/48.24964852.js"><link rel="prefetch" href="/Weblog/assets/js/49.e7608465.js"><link rel="prefetch" href="/Weblog/assets/js/5.c1152841.js"><link rel="prefetch" href="/Weblog/assets/js/50.35c99ad9.js"><link rel="prefetch" href="/Weblog/assets/js/51.6b5dac05.js"><link rel="prefetch" href="/Weblog/assets/js/52.c4bb9237.js"><link rel="prefetch" href="/Weblog/assets/js/54.b8170212.js"><link rel="prefetch" href="/Weblog/assets/js/55.3f8a7f90.js"><link rel="prefetch" href="/Weblog/assets/js/56.70171628.js"><link rel="prefetch" href="/Weblog/assets/js/57.bfaf61b1.js"><link rel="prefetch" href="/Weblog/assets/js/58.db4b1b8a.js"><link rel="prefetch" href="/Weblog/assets/js/59.77684353.js"><link rel="prefetch" href="/Weblog/assets/js/6.829d0e7e.js"><link rel="prefetch" href="/Weblog/assets/js/60.6e9d6cac.js"><link rel="prefetch" href="/Weblog/assets/js/61.275c3154.js"><link rel="prefetch" href="/Weblog/assets/js/62.dd80ea43.js"><link rel="prefetch" href="/Weblog/assets/js/63.dbe8bf46.js"><link rel="prefetch" href="/Weblog/assets/js/64.14e4d91c.js"><link rel="prefetch" href="/Weblog/assets/js/65.c15a382b.js"><link rel="prefetch" href="/Weblog/assets/js/66.1eb3e94c.js"><link rel="prefetch" href="/Weblog/assets/js/67.3ae69c25.js"><link rel="prefetch" href="/Weblog/assets/js/68.2e02b211.js"><link rel="prefetch" href="/Weblog/assets/js/69.2016bf42.js"><link rel="prefetch" href="/Weblog/assets/js/7.1f4a6057.js"><link rel="prefetch" href="/Weblog/assets/js/70.8e2ebe5b.js"><link rel="prefetch" href="/Weblog/assets/js/8.5b6e1357.js"><link rel="prefetch" href="/Weblog/assets/js/9.93970f24.js">
+    <link rel="stylesheet" href="/Weblog/assets/css/styles.05873600.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Weblog/" class="home-link router-link-active"><!----><span class="site-name">
+      AlexTao 的 博客
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link router-link-active">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link router-link-active">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Javascript</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/Weblog/javascript/" aria-current="page" class="sidebar-link">高效javascript</a></li><li><a href="/Weblog/javascript/33个概念.html" class="sidebar-link">JavaScript开发者应懂的33个概念</a></li><li><a href="/Weblog/javascript/js备忘录.html" class="sidebar-link">JS备忘录</a></li><li><a href="/Weblog/javascript/js概念.html" class="sidebar-link">JS 概念</a></li><li><a href="/Weblog/javascript/片段和trick.html" class="sidebar-link">片段和trick</a></li><li><a href="/Weblog/javascript/常用正则.html" class="sidebar-link">常用正则表达式</a></li><li><a href="/Weblog/javascript/处理异步的方法.html" class="sidebar-link">处理异步的方法</a></li><li><a href="/Weblog/javascript/字符串.html" class="sidebar-link">字符串</a></li><li><a href="/Weblog/javascript/数组.html" class="sidebar-link">数组</a></li><li><a href="/Weblog/javascript/浅谈 JSON.html" class="sidebar-link">浅谈 JSON</a></li><li><a href="/Weblog/javascript/详解闭包.html" class="sidebar-link">详解闭包</a></li><li><a href="/Weblog/javascript/执行上下文.html" class="active sidebar-link">执行上下文</a></li><li><a href="/Weblog/javascript/this.html" class="sidebar-link">this</a></li><li><a href="/Weblog/javascript/深浅拷贝.html" class="sidebar-link">深浅拷贝</a></li><li><a href="/Weblog/javascript/面向对象.html" class="sidebar-link">面向对象</a></li><li><a href="/Weblog/javascript/继承方式.html" class="sidebar-link">继承方式</a></li><li><a href="/Weblog/javascript/节流防抖.html" class="sidebar-link">节流防抖</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="执行上下文">执行上下文</h1><p>当执行 JS 代码时，会产生三种执行上下文</p><ul><li>全局执行上下文</li><li>函数执行上下文</li><li>eval 执行上下文</li></ul><p>每个执行上下文中都有三个重要的属性</p><ul><li>变量对象（VO），包含变量、函数声明和函数的形参，该属性只能在全局上下文中访问</li><li>作用域链（JS 采用词法作用域，也就是说变量的作用域是在定义时就决定了）</li><li>this</li></ul><div class="language- extra-class"><pre class="language-text"><code>var a = 10
+function foo(i) {
+  var b = 20
+}
+foo()
+</code></pre></div><p>执行栈中有两个上下文：全局上下文和函数 foo 上下文。</p><div class="language- extra-class"><pre class="language-text"><code>stack = [
+    globalContext,
+    fooContext
+]
+</code></pre></div><p>对于全局上下文来说，VO 大概是这样的</p><div class="language- extra-class"><pre class="language-text"><code>globalContext.VO === globe
+globalContext.VO = {
+    a: undefined,
+	foo: &lt;Function&gt;,
+}
+</code></pre></div><p>对于函数 <code>foo</code> 来说，VO 不能访问，只能访问到活动对象（AO）</p><div class="language- extra-class"><pre class="language-text"><code>fooContext.VO === foo.AO
+fooContext.AO {
+    i: undefined,
+	b: undefined,
+    arguments: &lt;&gt;
+}
+// arguments 是函数独有的对象(箭头函数没有)
+// 该对象是一个伪数组，有 `length` 属性且可以通过下标访问元素
+// 该对象中的 `callee` 属性代表函数本身
+// `caller` 属性代表函数的调用者
+</code></pre></div><p>对于作用域链，可以把它理解成包含自身变量对象和上级变量对象的列表，通过 <code>[[Scope]]</code> 属性查找上级变量</p><div class="language- extra-class"><pre class="language-text"><code>fooContext.[[Scope]] = [
+    globalContext.VO
+]
+fooContext.Scope = fooContext.[[Scope]] + fooContext.VO
+fooContext.Scope = [
+    fooContext.VO,
+    globalContext.VO
+]
+</code></pre></div><p>接下来让我们看一个老生常谈的例子，<code>var</code></p><div class="language- extra-class"><pre class="language-text"><code>b() // call b
+console.log(a) // undefined
+
+var a = 'Hello world'
+
+function b() {
+	console.log('call b')
+}
+</code></pre></div><p>想必以上的输出大家肯定都已经明白了，这是因为函数和变量提升的原因。通常提升的解释是说将声明的代码移动到了顶部，这其实没有什么错误，便于大家理解。但是更准确的解释应该是：在生成执行上下文时，会有两个阶段。第一个阶段是创建的阶段（具体步骤是创建 VO），JS 解释器会找出需要提升的变量和函数，并且给他们提前在内存中开辟好空间，函数的话会将整个函数存入内存中，变量只声明并且赋值为 undefined，所以在第二个阶段，也就是代码执行阶段，我们可以直接提前使用。</p><p>在提升的过程中，相同的函数会覆盖上一个函数，并且函数优先于变量提升</p><div class="language- extra-class"><pre class="language-text"><code>b() // call b second
+
+function b() {
+	console.log('call b fist')
+}
+function b() {
+	console.log('call b second')
+}
+var b = 'Hello world'
+</code></pre></div><p><code>var</code> 会产生很多错误，所以在 ES6中引入了 <code>let</code>。<code>let</code> 不能在声明前使用，但是这并不是常说的 <code>let</code> 不会提升，<code>let</code> 提升了声明但没有赋值，因为临时死区导致了并不能在声明前使用。</p><p>对于非匿名的立即执行函数需要注意以下一点</p><div class="language- extra-class"><pre class="language-text"><code>var foo = 1
+(function foo() {
+    foo = 10
+    console.log(foo)
+}()) // -&gt; ƒ foo() { foo = 10 ; console.log(foo) }
+</code></pre></div><p>因为当 JS 解释器在遇到非匿名的立即执行函数时，会创建一个辅助的特定对象，然后将函数名称作为这个对象的属性，因此函数内部才可以访问到 <code>foo</code>，但是这又个值是只读的，所以对它的赋值并不生效，所以打印的结果还是这个函数，并且外部的值也没有发生更改。</p><blockquote><div class="language- extra-class"><pre class="language-text"><code>specialObject = {};
+ 
+Scope = specialObject + Scope;
+ 
+foo = new FunctionExpression;
+foo.[[Scope]] = Scope;
+specialObject.foo = foo; // {DontDelete}, {ReadOnly}
+ 
+delete Scope[0]; // remove specialObject from the front of scope chain
+</code></pre></div></blockquote><p>Now, let's try it 👉</p></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">9/20/2020, 12:22:33 PM</span></div></div><!----></div></div></div>
+    <script src="/Weblog/assets/js/app.05873600.js" defer></script><script src="/Weblog/assets/js/53.e53dd56d.js" defer></script>
+  </body>
+</html>

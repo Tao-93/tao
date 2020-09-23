@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack | AlexTao 的 博客</title>
+    <meta name="description" content="In doing we learn.">
+    <link rel="icon" href="favicon.ico">
+    
+    <link rel="preload" href="/Weblog/assets/css/styles.05873600.css" as="style"><link rel="preload" href="/Weblog/assets/js/app.05873600.js" as="script"><link rel="preload" href="/Weblog/assets/js/69.2016bf42.js" as="script"><link rel="prefetch" href="/Weblog/assets/css/16.styles.2339a627.css"><link rel="prefetch" href="/Weblog/assets/css/5.styles.c1152841.css"><link rel="prefetch" href="/Weblog/assets/css/7.styles.1f4a6057.css"><link rel="prefetch" href="/Weblog/assets/css/8.styles.5b6e1357.css"><link rel="prefetch" href="/Weblog/assets/js/0.a8dcd889.js"><link rel="prefetch" href="/Weblog/assets/js/10.fe0f74e6.js"><link rel="prefetch" href="/Weblog/assets/js/11.d51cd775.js"><link rel="prefetch" href="/Weblog/assets/js/12.01521323.js"><link rel="prefetch" href="/Weblog/assets/js/13.82c3fc4a.js"><link rel="prefetch" href="/Weblog/assets/js/14.3b16e4be.js"><link rel="prefetch" href="/Weblog/assets/js/15.abf2374c.js"><link rel="prefetch" href="/Weblog/assets/js/16.2339a627.js"><link rel="prefetch" href="/Weblog/assets/js/17.f68b5694.js"><link rel="prefetch" href="/Weblog/assets/js/18.1dc877c8.js"><link rel="prefetch" href="/Weblog/assets/js/19.8d3a8eb9.js"><link rel="prefetch" href="/Weblog/assets/js/2.af3ad6a4.js"><link rel="prefetch" href="/Weblog/assets/js/20.b49a1359.js"><link rel="prefetch" href="/Weblog/assets/js/21.791ceaa2.js"><link rel="prefetch" href="/Weblog/assets/js/22.fc4cbaec.js"><link rel="prefetch" href="/Weblog/assets/js/23.4ad12214.js"><link rel="prefetch" href="/Weblog/assets/js/24.55bc5812.js"><link rel="prefetch" href="/Weblog/assets/js/25.f985eed7.js"><link rel="prefetch" href="/Weblog/assets/js/26.4cb7663f.js"><link rel="prefetch" href="/Weblog/assets/js/27.a14669b1.js"><link rel="prefetch" href="/Weblog/assets/js/28.8620d72f.js"><link rel="prefetch" href="/Weblog/assets/js/29.d0f2b69c.js"><link rel="prefetch" href="/Weblog/assets/js/3.fb06d288.js"><link rel="prefetch" href="/Weblog/assets/js/30.779bb068.js"><link rel="prefetch" href="/Weblog/assets/js/31.40c7de84.js"><link rel="prefetch" href="/Weblog/assets/js/32.ba7c27f0.js"><link rel="prefetch" href="/Weblog/assets/js/33.6ab2c1a8.js"><link rel="prefetch" href="/Weblog/assets/js/34.e8c873d7.js"><link rel="prefetch" href="/Weblog/assets/js/35.e96a75ad.js"><link rel="prefetch" href="/Weblog/assets/js/36.86fbcd91.js"><link rel="prefetch" href="/Weblog/assets/js/37.b26a2882.js"><link rel="prefetch" href="/Weblog/assets/js/38.992c347d.js"><link rel="prefetch" href="/Weblog/assets/js/39.e58d8f81.js"><link rel="prefetch" href="/Weblog/assets/js/4.b91b4b8a.js"><link rel="prefetch" href="/Weblog/assets/js/40.01c8b7bc.js"><link rel="prefetch" href="/Weblog/assets/js/41.75147100.js"><link rel="prefetch" href="/Weblog/assets/js/42.b2377431.js"><link rel="prefetch" href="/Weblog/assets/js/43.3a184450.js"><link rel="prefetch" href="/Weblog/assets/js/44.067bcf22.js"><link rel="prefetch" href="/Weblog/assets/js/45.68ba4476.js"><link rel="prefetch" href="/Weblog/assets/js/46.78e6e5f5.js"><link rel="prefetch" href="/Weblog/assets/js/47.08c79ff4.js"><link rel="prefetch" href="/Weblog/assets/js/48.24964852.js"><link rel="prefetch" href="/Weblog/assets/js/49.e7608465.js"><link rel="prefetch" href="/Weblog/assets/js/5.c1152841.js"><link rel="prefetch" href="/Weblog/assets/js/50.35c99ad9.js"><link rel="prefetch" href="/Weblog/assets/js/51.6b5dac05.js"><link rel="prefetch" href="/Weblog/assets/js/52.c4bb9237.js"><link rel="prefetch" href="/Weblog/assets/js/53.e53dd56d.js"><link rel="prefetch" href="/Weblog/assets/js/54.b8170212.js"><link rel="prefetch" href="/Weblog/assets/js/55.3f8a7f90.js"><link rel="prefetch" href="/Weblog/assets/js/56.70171628.js"><link rel="prefetch" href="/Weblog/assets/js/57.bfaf61b1.js"><link rel="prefetch" href="/Weblog/assets/js/58.db4b1b8a.js"><link rel="prefetch" href="/Weblog/assets/js/59.77684353.js"><link rel="prefetch" href="/Weblog/assets/js/6.829d0e7e.js"><link rel="prefetch" href="/Weblog/assets/js/60.6e9d6cac.js"><link rel="prefetch" href="/Weblog/assets/js/61.275c3154.js"><link rel="prefetch" href="/Weblog/assets/js/62.dd80ea43.js"><link rel="prefetch" href="/Weblog/assets/js/63.dbe8bf46.js"><link rel="prefetch" href="/Weblog/assets/js/64.14e4d91c.js"><link rel="prefetch" href="/Weblog/assets/js/65.c15a382b.js"><link rel="prefetch" href="/Weblog/assets/js/66.1eb3e94c.js"><link rel="prefetch" href="/Weblog/assets/js/67.3ae69c25.js"><link rel="prefetch" href="/Weblog/assets/js/68.2e02b211.js"><link rel="prefetch" href="/Weblog/assets/js/7.1f4a6057.js"><link rel="prefetch" href="/Weblog/assets/js/70.8e2ebe5b.js"><link rel="prefetch" href="/Weblog/assets/js/8.5b6e1357.js"><link rel="prefetch" href="/Weblog/assets/js/9.93970f24.js">
+    <link rel="stylesheet" href="/Weblog/assets/css/styles.05873600.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Weblog/" class="home-link router-link-active"><!----><span class="site-name">
+      AlexTao 的 博客
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link router-link-active">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link router-link-active">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Tool</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/Weblog/tool/" aria-current="page" class="sidebar-link">git</a></li><li><a href="/Weblog/tool/win指令.html" class="sidebar-link">Windows 常用新建文件指令</a></li><li><a href="/Weblog/tool/npm命令.html" class="sidebar-link">npm 常用命令及包</a></li><li><a href="/Weblog/tool/webpack.html" aria-current="page" class="active sidebar-link">webpack</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Weblog/tool/webpack.html#webpack-核心概念" class="sidebar-link">webpack 核心概念</a></li><li class="sidebar-sub-header"><a href="/Weblog/tool/webpack.html#webpack-构建流程" class="sidebar-link">webpack 构建流程</a></li><li class="sidebar-sub-header"><a href="/Weblog/tool/webpack.html#webpack4-0" class="sidebar-link">webpack4.0</a></li></ul></li><li><a href="/Weblog/tool/echarts配置.html" class="sidebar-link">echarts 属性设置</a></li><li><a href="/Weblog/tool/util.html" class="sidebar-link">util</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="webpack">webpack</h1><h2 id="webpack-核心概念">webpack 核心概念</h2><ul><li><p>entry</p><p>入口起点(entry point)指示 webpack 应该使用哪个模块,来作为构建其内部依赖图的开始。</p><p>进入入口起点后,webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。</p><p>每个依赖项随即被处理,最后输出到称之为 bundles 的文件中。</p></li><li><p>output</p><p>output 属性告诉 webpack 在哪里输出它所创建的 bundles,以及如何命名这些文件,默认值为 ./dist。</p><p>基本上,整个应用程序结构,都会被编译到你指定的输出路径的文件夹中。</p></li><li><p>module</p><p>模块,在 Webpack 里一切皆模块,一个模块对应着一个文件。Webpack 会从配置的 Entry 开始递归找出所有依赖的模块。</p></li><li><p>chunk</p><p>代码块,一个 Chunk 由多个模块组合而成,用于代码合并与分割。</p></li><li><p>loader</p><p>loader 让 webpack 能够去处理那些非 JavaScript 文件（webpack 自身只理解 JavaScript）。</p><p>loader 可以将所有类型的文件转换为 webpack 能够处理的有效模块,然后你就可以利用 webpack 的打包能力,对它们进行处理。</p><p>本质上,webpack loader 将所有类型的文件,转换为应用程序的依赖图（和最终的 bundle）可以直接引用的模块。</p></li></ul><h2 id="webpack-构建流程">webpack 构建流程</h2><ol><li>初始化参数：从配置文件和 Shell 语句中读取与合并参数,得出最终的参数。</li><li>开始编译：用上一步得到的参数初始化 Compiler 对象,加载所有配置的插件,执行对象的 run 方法开始执行编译。</li><li>确定入口：根据配置中的 entry 找出所有的入口文件。</li><li>编译模块：从入口文件出发,调用所有配置的 Loader 对模块进行翻译,再找出该模块依赖的模块,再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理。</li><li>完成模块编译：在经过第 4 步使用 Loader 翻译完所有模块后,得到了每个模块被翻译后的最终内容以及它们之间的依赖关系。</li><li>输出资源：根据入口和模块之间的依赖关系,组装成一个个包含多个模块的 Chunk,再把每个 Chunk 转换成一个单独的文件加入到输出列表,这步是可以修改输出内容的最后机会。</li><li>输出完成：在确定好输出内容后,根据配置确定输出的路径和文件名,把文件内容写入到文件系统。</li></ol><p>在以上过程中,Webpack 会在特定的时间点广播出特定的事件,插件在监听到感兴趣的事件后会执行特定的逻辑,并且插件可以调用 Webpack 提供的 API 改变 Webpack 的运行结果。</p><h2 id="webpack4-0">webpack4.0</h2><div class="language- extra-class"><pre class="language-text"><code>const path = require('path');
+const glob = require('glob');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack'); // 去除无用的css
+const optimizeCss = require('optimize-css-assets-webpack-plugin'); //CSS压缩
+const WebpackParallelUglifyPlugin = require('webpack-parallel-uglify-plugin'); //js优化
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+
+module.exports = {
+    entry: {
+        index: './src/js/index.js',
+        login: './src/js/login.js'
+    },
+    output: {
+        filename: 'js/[name].[hash:4].js',
+        path: path.resolve('dist')
+    },
+    performance: {
+        // hints: false
+        hints: &quot;warning&quot;, // 枚举
+        maxAssetSize: 30000000, // 整数类型（以字节为单位）
+        maxEntrypointSize: 50000000, // 整数类型（以字节为单位）
+        assetFilter: function(assetFilename) {
+            // 提供资源文件名的断言函数
+            return assetFilename.endsWith('.css') || assetFilename.endsWith('.js');
+        }
+    },
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ExtractTextWebpackPlugin.extract({
+                use: [{
+                    loader: 'css-loader',
+                }, {
+                    loader: 'postcss-loader',
+                }],
+                publicPath: '../'
+            }),
+            include: path.resolve(__dirname, 'src'),
+            exclude: /node_modules/
+        }, {
+            test: /\.scss/,
+            use: ExtractTextWebpackPlugin.extract({
+                use: [{
+                    loader: 'css-loader'
+                }, {
+                    loader: 'sass-loader'
+                }, {
+                    loader: 'postcss-loader'
+                }],
+                fallback: 'style-loader',
+                publicPath: '../'
+            }),
+            include: path.resolve(__dirname, 'src'),
+            exclude: /node_modules/
+        }, {
+            test: /\.(jpe?g|png|gif)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 5 * 1024,
+                    outputPath: 'images/'
+                }
+            }]
+        }, {
+            test: /\.(htm|html)$/,
+            use: 'html-withimg-loader'
+        }, {
+            test: /\.(eot|ttf|woff|svg)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'fonts/'
+                }
+            }]
+        }, {
+            test: /\.js?$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader'
+        }]
+    },
+    optimization: {
+        minimize: true, //取代 new UglifyJsPlugin(/* ... */)
+        providedExports: true,
+        usedExports: true,
+        //识别package.json中的sideEffects以剔除无用的模块，用来做tree-shake
+        //依赖于optimization.providedExports和optimization.usedExports
+        sideEffects: true,
+        //取代 new webpack.optimize.ModuleConcatenationPlugin()
+        concatenateModules: true,
+        //取代 new webpack.NoEmitOnErrorsPlugin()，编译错误时不打印输出资源。
+        noEmitOnErrors: true,
+        splitChunks: {
+            chunks: 'async',
+            minSize: 30000,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            name: true,
+            cacheGroups: {
+                vendor: {
+                    name: &quot;vendor&quot;,
+                    chunks: &quot;initial&quot;,
+                    minChunks: 2
+                }
+            }
+        }
+    },
+    plugins: [
+        // new HtmlWebpackPlugin({
+        //     title: 'template',
+        //     template: './src/index.html',
+        //     filename: 'index.html',
+        //     chunks: ['vendor', 'index'],
+        //     hash: true
+        // }),
+        // new HtmlWebpackPlugin({
+        //     title: 'Custom template',
+        //     template: './src/login.html',
+        //     filename: 'login.html',
+        //     chunks: ['vendor', 'login'],
+        //     hash: true
+        // }),
+        new optimizeCss({
+            cssProcessor: require('cssnano'), //引入cssnano配置压缩选项
+            cssProcessorOptions: {
+                discardComments: { removeAll: true }
+            },
+            canPrint: true //是否将插件信息打印到控制台
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextWebpackPlugin('css/style.css'),
+        new CleanWebpackPlugin('dist'),
+        new PurifyCSSPlugin({
+            paths: glob.sync(path.join(__dirname, 'src/*.html'))
+        }),
+         new WebpackParallelUglifyPlugin({
+             uglifyJS: {
+                output: {
+                    beautify: false, //不需要格式化
+                   comments: false //不保留注释
+                },
+                 compress: {
+                    warnings: false, // 在UglifyJs删除没有用到的代码时不输出警告
+                     drop_console: true, // 删除所有的 `console` 语句，可以兼容ie浏览器
+                     collapse_vars: true, // 内嵌定义了但是只用到一次的变量
+                     reduce_vars: true // 提取出出现多次但是没有定义成变量去引用的静态值
+                 }
+             }
+        })
+    ],
+    resolve: {
+        alias: {
+            'jquery$': path.resolve(__dirname, 'src/js/jquery.js'),
+            '_$': path.resolve(__dirname, 'src/js/lodash.min.js')
+        },
+        extensions: ['.js', '.json', '.css']
+    },
+    devServer: {
+        contentBase: './dist',
+        host: 'localhost',
+        port: 8866,
+        // open: true,
+        hot: true,
+        compress: true
+    }
+    // mode: 'development' //development--production
+};
+//配置页面
+const getHtmlConfig = function(name, title, chunks) {
+    return {
+        template: __dirname + &quot;/src/&quot; + name + &quot;.html&quot;,
+        filename: name + &quot;.html&quot;,
+        // favicon: './favicon.ico',
+        title: title,
+        hash: true, //开启hash  ?[hash]
+        chunks: chunks, //页面要引入的包
+        minify: process.env.NODE_ENV === &quot;development&quot; ? false : {
+            removeComments: true, //移除HTML中的注释
+            // collapseWhitespace: true, //折叠空白区域 也就是压缩代码
+            // removeAttributeQuotes: true, //去除属性引用
+        },
+    };
+};
+const htmlArray = [{
+        _html: 'index',
+        _title: '首页',
+        _chunks: ['vendor', 'index']
+    },
+    {
+        _html: 'login',
+        _title: '登录',
+        _chunks: ['vendor', 'login']
+    },
+];
+htmlArray.forEach((element) =&gt; {
+    module.exports.plugins.push(new HtmlWebpackPlugin(getHtmlConfig(element._html, element._title, element._chunks)));
+});
+</code></pre></div><p>Now, let's try it 👉</p></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">9/20/2020, 12:22:33 PM</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/Weblog/tool/npm命令.html" class="prev">
+          npm 常用命令及包
+        </a></span><span class="next"><a href="/Weblog/tool/echarts配置.html">
+          echarts 属性设置
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/Weblog/assets/js/app.05873600.js" defer></script><script src="/Weblog/assets/js/69.2016bf42.js" defer></script>
+  </body>
+</html>

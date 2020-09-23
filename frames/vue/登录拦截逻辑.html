@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>登录拦截逻辑 | AlexTao 的 博客</title>
+    <meta name="description" content="In doing we learn.">
+    <link rel="icon" href="favicon.ico">
+    
+    <link rel="preload" href="/Weblog/assets/css/styles.05873600.css" as="style"><link rel="preload" href="/Weblog/assets/js/app.05873600.js" as="script"><link rel="preload" href="/Weblog/assets/js/35.e96a75ad.js" as="script"><link rel="prefetch" href="/Weblog/assets/css/16.styles.2339a627.css"><link rel="prefetch" href="/Weblog/assets/css/5.styles.c1152841.css"><link rel="prefetch" href="/Weblog/assets/css/7.styles.1f4a6057.css"><link rel="prefetch" href="/Weblog/assets/css/8.styles.5b6e1357.css"><link rel="prefetch" href="/Weblog/assets/js/0.a8dcd889.js"><link rel="prefetch" href="/Weblog/assets/js/10.fe0f74e6.js"><link rel="prefetch" href="/Weblog/assets/js/11.d51cd775.js"><link rel="prefetch" href="/Weblog/assets/js/12.01521323.js"><link rel="prefetch" href="/Weblog/assets/js/13.82c3fc4a.js"><link rel="prefetch" href="/Weblog/assets/js/14.3b16e4be.js"><link rel="prefetch" href="/Weblog/assets/js/15.abf2374c.js"><link rel="prefetch" href="/Weblog/assets/js/16.2339a627.js"><link rel="prefetch" href="/Weblog/assets/js/17.f68b5694.js"><link rel="prefetch" href="/Weblog/assets/js/18.1dc877c8.js"><link rel="prefetch" href="/Weblog/assets/js/19.8d3a8eb9.js"><link rel="prefetch" href="/Weblog/assets/js/2.af3ad6a4.js"><link rel="prefetch" href="/Weblog/assets/js/20.b49a1359.js"><link rel="prefetch" href="/Weblog/assets/js/21.791ceaa2.js"><link rel="prefetch" href="/Weblog/assets/js/22.fc4cbaec.js"><link rel="prefetch" href="/Weblog/assets/js/23.4ad12214.js"><link rel="prefetch" href="/Weblog/assets/js/24.55bc5812.js"><link rel="prefetch" href="/Weblog/assets/js/25.f985eed7.js"><link rel="prefetch" href="/Weblog/assets/js/26.4cb7663f.js"><link rel="prefetch" href="/Weblog/assets/js/27.a14669b1.js"><link rel="prefetch" href="/Weblog/assets/js/28.8620d72f.js"><link rel="prefetch" href="/Weblog/assets/js/29.d0f2b69c.js"><link rel="prefetch" href="/Weblog/assets/js/3.fb06d288.js"><link rel="prefetch" href="/Weblog/assets/js/30.779bb068.js"><link rel="prefetch" href="/Weblog/assets/js/31.40c7de84.js"><link rel="prefetch" href="/Weblog/assets/js/32.ba7c27f0.js"><link rel="prefetch" href="/Weblog/assets/js/33.6ab2c1a8.js"><link rel="prefetch" href="/Weblog/assets/js/34.e8c873d7.js"><link rel="prefetch" href="/Weblog/assets/js/36.86fbcd91.js"><link rel="prefetch" href="/Weblog/assets/js/37.b26a2882.js"><link rel="prefetch" href="/Weblog/assets/js/38.992c347d.js"><link rel="prefetch" href="/Weblog/assets/js/39.e58d8f81.js"><link rel="prefetch" href="/Weblog/assets/js/4.b91b4b8a.js"><link rel="prefetch" href="/Weblog/assets/js/40.01c8b7bc.js"><link rel="prefetch" href="/Weblog/assets/js/41.75147100.js"><link rel="prefetch" href="/Weblog/assets/js/42.b2377431.js"><link rel="prefetch" href="/Weblog/assets/js/43.3a184450.js"><link rel="prefetch" href="/Weblog/assets/js/44.067bcf22.js"><link rel="prefetch" href="/Weblog/assets/js/45.68ba4476.js"><link rel="prefetch" href="/Weblog/assets/js/46.78e6e5f5.js"><link rel="prefetch" href="/Weblog/assets/js/47.08c79ff4.js"><link rel="prefetch" href="/Weblog/assets/js/48.24964852.js"><link rel="prefetch" href="/Weblog/assets/js/49.e7608465.js"><link rel="prefetch" href="/Weblog/assets/js/5.c1152841.js"><link rel="prefetch" href="/Weblog/assets/js/50.35c99ad9.js"><link rel="prefetch" href="/Weblog/assets/js/51.6b5dac05.js"><link rel="prefetch" href="/Weblog/assets/js/52.c4bb9237.js"><link rel="prefetch" href="/Weblog/assets/js/53.e53dd56d.js"><link rel="prefetch" href="/Weblog/assets/js/54.b8170212.js"><link rel="prefetch" href="/Weblog/assets/js/55.3f8a7f90.js"><link rel="prefetch" href="/Weblog/assets/js/56.70171628.js"><link rel="prefetch" href="/Weblog/assets/js/57.bfaf61b1.js"><link rel="prefetch" href="/Weblog/assets/js/58.db4b1b8a.js"><link rel="prefetch" href="/Weblog/assets/js/59.77684353.js"><link rel="prefetch" href="/Weblog/assets/js/6.829d0e7e.js"><link rel="prefetch" href="/Weblog/assets/js/60.6e9d6cac.js"><link rel="prefetch" href="/Weblog/assets/js/61.275c3154.js"><link rel="prefetch" href="/Weblog/assets/js/62.dd80ea43.js"><link rel="prefetch" href="/Weblog/assets/js/63.dbe8bf46.js"><link rel="prefetch" href="/Weblog/assets/js/64.14e4d91c.js"><link rel="prefetch" href="/Weblog/assets/js/65.c15a382b.js"><link rel="prefetch" href="/Weblog/assets/js/66.1eb3e94c.js"><link rel="prefetch" href="/Weblog/assets/js/67.3ae69c25.js"><link rel="prefetch" href="/Weblog/assets/js/68.2e02b211.js"><link rel="prefetch" href="/Weblog/assets/js/69.2016bf42.js"><link rel="prefetch" href="/Weblog/assets/js/7.1f4a6057.js"><link rel="prefetch" href="/Weblog/assets/js/70.8e2ebe5b.js"><link rel="prefetch" href="/Weblog/assets/js/8.5b6e1357.js"><link rel="prefetch" href="/Weblog/assets/js/9.93970f24.js">
+    <link rel="stylesheet" href="/Weblog/assets/css/styles.05873600.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Weblog/" class="home-link router-link-active"><!----><span class="site-name">
+      AlexTao 的 博客
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link router-link-active">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Weblog/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Classify</span><span class="arrow right"></span></a><ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----><a href="/Weblog/html_css/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----><a href="/Weblog/javascript/" class="nav-link">Javascript</a></li><li class="dropdown-item"><!----><a href="/Weblog/node/" class="nav-link">Node.js</a></li><li class="dropdown-item"><!----><a href="/Weblog/frames/" class="nav-link router-link-active">Frames</a></li><li class="dropdown-item"><!----><a href="/Weblog/tool/" class="nav-link">Tool</a></li><li class="dropdown-item"><!----><a href="/Weblog/currency/" class="nav-link">Currency</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/AlexTaoClub" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Vue</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/Weblog/frames/vue/" aria-current="page" class="sidebar-link">数据原理</a></li><li><a href="/Weblog/frames/vue/生命周期.html" class="sidebar-link">生命周期</a></li><li><a href="/Weblog/frames/vue/template.html" class="sidebar-link">template理解</a></li><li><a href="/Weblog/frames/vue/NextTick.html" class="sidebar-link">NextTick</a></li><li><a href="/Weblog/frames/vue/VueRouter.html" class="sidebar-link">VueRouter</a></li><li><a href="/Weblog/frames/vue/登录拦截逻辑.html" class="active sidebar-link">登录拦截逻辑</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Weblog/frames/vue/登录拦截逻辑.html#路由拦截" class="sidebar-link">路由拦截</a></li><li class="sidebar-sub-header"><a href="/Weblog/frames/vue/登录拦截逻辑.html#拦截器" class="sidebar-link">拦截器</a></li></ul></li><li><a href="/Weblog/frames/vue/路由跳转传参.html" class="sidebar-link">路由跳转传参</a></li><li><a href="/Weblog/frames/vue/组件通信.html" class="sidebar-link">组件通信 </a></li><li><a href="/Weblog/frames/vue/父子组件数据双向绑定.html" class="sidebar-link">父子组件数据双向绑定</a></li><li><a href="/Weblog/frames/vue/VUEX.html" class="sidebar-link">VUEX</a></li><li><a href="/Weblog/frames/vue/vue-property-decorator.html" class="sidebar-link">vue-property-decorator</a></li><li><a href="/Weblog/frames/vue/TslintOfVue.html" class="sidebar-link">Tslint.json配置</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span><span class="arrow right"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="登录拦截逻辑">登录拦截逻辑</h1><h2 id="路由拦截">路由拦截</h2><p>你需要先生成自己的  （<strong>[生成Token]</strong>）。</p><p>首先在定义路由的时候就需要多添加一个自定义字段<code>requireAuth</code>，用于判断该路由的访问是否需要登录。如果用户已经登录，则顺利进入路由， 否则就进入登录页面。</p><div class="language- extra-class"><pre class="language-text"><code>const routes = [
+    {
+        path: '/',
+        name: '/',
+        component: Index
+    },
+    {
+        path: '/repository',
+        name: 'repository',
+        meta: {
+            requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
+        },
+        component: Repository
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login
+    }
+];
+</code></pre></div><p>定义完路由后，我们主要是利用<code>vue-router</code>提供的钩子函数<code>beforeEach()</code>对路由进行判断。</p><div class="language- extra-class"><pre class="language-text"><code>router.beforeEach((to, from, next) =&gt; {
+    if (to.meta.requireAuth) {  // 判断该路由是否需要登录权限
+        if (store.state.token) {  // 通过vuex state获取当前的token是否存在
+            next();
+        }
+        else {
+            next({
+                path: '/login',
+                query: {redirect: to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+            })
+        }
+    }
+    else {
+        next();
+    }
+})
+</code></pre></div><p>每个钩子方法接收三个参数：</p><ul><li>to: Route: 即将要进入的目标 路由对象</li><li>from: Route: 当前导航正要离开的路由</li><li>next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。
+<ul><li>next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。</li><li>next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。</li><li>next('/') 或者 next({ path: '/' }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。</li></ul></li></ul><p><strong>确保要调用 next 方法，否则钩子就不会被 resolved。</strong></p><blockquote><p>完整的方法见<code>/src/router.js</code></p></blockquote><p>其中，<code>to.meta</code>中是我们自定义的数据，其中就包括我们刚刚定义的<code>requireAuth</code>字段。通过这个字段来判断该路由是否需要登录权限。需要的话，同时当前应用不存在token，则跳转到登录页面，进行登录。登录成功后跳转到目标路由。</p><p>登录拦截到这里就结束了吗？并没有。这种方式只是简单的前端路由控制，并不能真正阻止用户访问需要登录权限的路由。还有一种情况便是：当前token失效了，但是token依然保存在本地。这时候你去访问需要登录权限的路由时，实际上应该让用户重新登录。 这时候就需要结合 http 拦截器 + 后端接口返回的http 状态码来判断。</p><h2 id="拦截器">拦截器</h2><p>要想统一处理所有http请求和响应，就得用上 axios 的拦截器。通过配置<code>http response inteceptor</code>，当后端接口返回<code>401 Unauthorized（未授权）</code>，让用户重新登录。</p><div class="language- extra-class"><pre class="language-text"><code>// http request 拦截器
+axios.interceptors.request.use(
+    config =&gt; {
+        if (store.state.token) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
+            config.headers.Authorization = `token ${store.state.token}`;
+        }
+        return config;
+    },
+    err =&gt; {
+        return Promise.reject(err);
+    });
+
+// http response 拦截器
+axios.interceptors.response.use(
+    response =&gt; {
+        return response;
+    },
+    error =&gt; {
+        if (error.response) {
+            switch (error.response.status) {
+                case 401:
+                    // 返回 401 清除token信息并跳转到登录页面
+                    store.commit(types.LOGOUT);
+                    router.replace({
+                        path: 'login',
+                        query: {redirect: router.currentRoute.fullPath}
+                    })
+            }
+        }
+        return Promise.reject(error.response.data)   // 返回接口返回的错误信息
+    });
+</code></pre></div><blockquote><p>完整的方法见<code>/src/http.js</code>.</p></blockquote><p>通过上面这两步，就可以在前端实现登录拦截了。<code>登出</code>功能也就很简单，只需要把当前token清除，再跳转到首页即可。</p><p>Now, let's try it 👉</p></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">9/20/2020, 12:22:33 PM</span></div></div><!----></div></div></div>
+    <script src="/Weblog/assets/js/app.05873600.js" defer></script><script src="/Weblog/assets/js/35.e96a75ad.js" defer></script>
+  </body>
+</html>
